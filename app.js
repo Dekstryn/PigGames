@@ -10,20 +10,24 @@ GAME RULES:
 */
 
 //Variable settings
-var scores, roundScore, activePlayer, dice;
+var scores, roundScore, activePlayer;
 
 scores = [0,0];
 roundScore = 0;
 activePlayer = 0;
-
-dice = Math.floor(Math.random() * 6) + 1;
 
 //DOM manipulating
 document.querySelector('#current-' + activePlayer).textContent = dice;
 
 //Function
 function btn(){
-  //Put coe here
+  // Random number
+  var dice = Math.floor(Math.random() * 6) + 1;
+
+  //Display the result
+
+  //Update the round score IF the rolled number was NOT a 1
+  
 }
 //Event listener
 document.querySelector('.btn-roll').addEventListener('click', btn);
