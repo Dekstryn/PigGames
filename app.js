@@ -51,8 +51,13 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
   scores[activePlayer] += roundScore;
   //Update the UI
   document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
-  nextplayer();
   //Check if palyer win the game
+  if (scores[activePlayer] >= 100){
+    document.querySelector('#name-1' + activePlayer).textContent = 'Winner';
+  }
+  else{
+    nextplayer();
+  }
 });
 
 function nextplayer(){
