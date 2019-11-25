@@ -55,3 +55,10 @@ function btn(){
 }
 //Event listener
 document.querySelector('.btn-roll').addEventListener('click', btn);
+document.querySelector('.btn-hold').addEventListener('click', function{
+  //Add current score to global score
+
+  //Update the UI
+
+  //Checl if palyer win the game
+});
