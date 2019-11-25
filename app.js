@@ -43,6 +43,8 @@ function btn(){
     //Next player
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     roundScore = 0;
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
   }
 }
 //Event listener
