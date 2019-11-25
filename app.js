@@ -16,6 +16,8 @@ scores = [0,0];
 roundScore = 0;
 activePlayer = 0;
 
+document.querySelector('.dice').getElementsByClassName.display = 'none';
+
 //DOM manipulating
 document.querySelector('#current-' + activePlayer).textContent = dice;
 
@@ -25,9 +27,12 @@ function btn(){
   var dice = Math.floor(Math.random() * 6) + 1;
 
   //Display the result
-
-  //Update the round score IF the rolled number was NOT a 1
+  var diceDOM = document.querySelector('.dice');
+  diceDOM.getElementsByClassName.display = 'block';
+  diceDOM.src = 'dice-' + dice + '.png';
   
+  //Update the round score IF the rolled number was NOT a 1
+
 }
 //Event listener
 document.querySelector('.btn-roll').addEventListener('click', btn);
