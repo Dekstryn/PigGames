@@ -20,3 +20,10 @@ dice = Math.floor(Math.random() * 6) + 1;
 
 //DOM manipulating
 document.querySelector('#current-' + activePlayer).textContent = dice;
+
+//Function
+function btn(){
+  //Put coe here
+}
+//Event listener
+document.querySelector('.btn-roll').addEventListener('click', btn);
