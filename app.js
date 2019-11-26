@@ -14,13 +14,9 @@ var scores, roundScore, activePlayer;
 
 init();
 
-document.querySelector('.dice').style.display = 'none';
 
-//DOM manipulating
-document.getElementById('score-0').textContent = '0';
-document.getElementById('score-1').textContent = '0';
-document.getElementById('current-0').textContent = '0';
-document.getElementById('current-1').textContent = '0';
+
+
 //Function
 function btn(){
   // Random number
@@ -80,4 +76,10 @@ function init(){
   scores = [0,0];
   activePlayer = 0;
   roundScore = 0;
+  //DOM manipulating
+  document.querySelector('.dice').style.display = 'none';
+  document.getElementById('score-0').textContent = '0';
+  document.getElementById('score-1').textContent = '0';
+  document.getElementById('current-0').textContent = '0';
+  document.getElementById('current-1').textContent = '0';
 }
