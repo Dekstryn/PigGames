@@ -62,6 +62,12 @@ function btn(){
       roundScore += dice;
       document.querySelector('#current-' + activePlayer).textContent = roundScore;
     }
+    else if (dice1 == 1 && dice2 == 1){
+      //Reset current player storage
+      scores[activePlayer] = 0;
+      //Next player
+      nextplayer();
+    }
     else {
       //Next player
       nextplayer();
