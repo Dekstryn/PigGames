@@ -12,9 +12,7 @@ GAME RULES:
 //Variable settings
 var scores, roundScore, activePlayer;
 
-scores = [0,0];
-roundScore = 0;
-activePlayer = 0;
+init();
 
 document.querySelector('.dice').style.display = 'none';
 
@@ -62,7 +60,10 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     nextplayer();
   }
 });
-
+document.querySelector('.btn-new').addEventListener(click, function(){
+  init();
+})
+//Functions
 function nextplayer(){
   activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
   roundScore = 0;
@@ -73,4 +74,10 @@ function nextplayer(){
   document.querySelector('.player-1-panel').classList.toggle('active');
 
   document.querySelector('.dice').style.display = 'none';
+}
+
+function init(){
+  scores = [0,0];
+  activePlayer = 0;
+  roundScore = 0;
 }
