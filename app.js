@@ -42,16 +42,22 @@ document.querySelector('.btn-new').addEventListener('click', init);
 function btn(){
   if(gamePlaying){
     //Random number
-    var dice = Math.floor(Math.random() * 6) + 1;
+    var dice1 = Math.floor(Math.random() * 6) + 1;
+    var dice2 = Math.floor(Math.random() * 6) + 1;
 
     //Display the result
-    var diceDOM = document.querySelector('.dice');
-    diceDOM.style.display = 'block';
-    diceDOM.src = 'dice-' + dice + '.png';
+    var diceDOM1 = document.querySelector('.dice1');
+    //diceDOM1.style.display = 'inline-block';
+    diceDOM1.src = 'dice-' + dice1 + '.png';
+
+    var diceDOM2 = document.querySelector('.dice2');
+    //diceDOM2.style.display = 'inline-block';
+    diceDOM2.src = 'dice-' + dice2 + '.png';
     
     //Update the round score IF the rolled number was NOT a 1
-    if (dice !== 1){
+    if (dice1 !== 1 || dice2 !== 1){
       //Add score
+      var dice = dice1 + dice2;
       roundScore += dice;
       document.querySelector('#current-' + activePlayer).textContent = roundScore;
     }
