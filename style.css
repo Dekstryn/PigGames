@@ -165,6 +165,7 @@ i {
 /*Popup style*/
 .popup {
     width: 1000px;
+    height: 400px;
     position: absolute;
     z-index: 2;
     top: 50%;
@@ -172,7 +173,6 @@ i {
     transform: translate(-50%, -50%);
     background-color: #fff;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
 }
 .popup__header{
     font-size: 100px;
@@ -182,4 +182,8 @@ i {
 .popup__list{
     padding: 12px 0 12px 250px;
     line-height: 24px;
+}
+.btn-start{
+    display: block;
+    margin: 24px;
 }
