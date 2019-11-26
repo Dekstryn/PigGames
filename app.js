@@ -25,6 +25,9 @@ if (numberValue > 1000){
 else if (numberValue < 10){
   numberValue = 10;
 }
+document.querySelector('.btn-number').addEventListener('click', function(){
+  document.querySelector('.popup-counting').style.display = 'none';
+});
 document.querySelector('.btn-hold').addEventListener('click', function() {
   if(gamePlaying){
     //Add current score to global score
