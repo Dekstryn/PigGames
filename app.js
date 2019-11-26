@@ -53,7 +53,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     nextplayer();
   }
 });
-document.querySelector('.btn-new').addEventListener(click, init);
+document.querySelector('.btn-new').addEventListener('click', init);
 
 //Functions
 function nextplayer(){
