@@ -14,9 +14,6 @@ var scores, roundScore, activePlayer;
 
 init();
 
-
-
-
 //Function
 function btn(){
   // Random number
@@ -56,8 +53,8 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     nextplayer();
   }
 });
-document.querySelector('.btn-new').addEventListener(click, init());
-})
+document.querySelector('.btn-new').addEventListener(click, init);
+
 //Functions
 function nextplayer(){
   activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
