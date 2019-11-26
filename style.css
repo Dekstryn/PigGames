@@ -182,7 +182,7 @@ i {
     width: 1000px;
     height: 400px;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -201,4 +201,15 @@ i {
 .btn-start{
     display: block;
     margin: 24px;
+}
+.popup-counting{
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
 }
