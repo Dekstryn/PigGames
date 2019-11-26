@@ -56,8 +56,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     nextplayer();
   }
 });
-document.querySelector('.btn-new').addEventListener(click, function(){
-  init();
+document.querySelector('.btn-new').addEventListener(click, init());
 })
 //Functions
 function nextplayer(){
@@ -65,10 +64,8 @@ function nextplayer(){
   roundScore = 0;
   document.getElementById('current-0').textContent = '0';
   document.getElementById('current-1').textContent = '0';
-
   document.querySelector('.player-0-panel').classList.toggle('active');
   document.querySelector('.player-1-panel').classList.toggle('active');
-
   document.querySelector('.dice').style.display = 'none';
 }
 
