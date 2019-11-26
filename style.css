@@ -181,4 +181,5 @@ i {
 }
 .popup__list{
     padding: 12px 0 12px 250px;
+    line-height: 24px;
 }
