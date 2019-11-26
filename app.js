@@ -47,15 +47,15 @@ function btn(){
 
     //Display the result
     var diceDOM1 = document.querySelector('.dice1');
-    //diceDOM1.style.display = 'inline-block';
+    diceDOM1.style.display = 'inline-block';
     diceDOM1.src = 'dice-' + dice1 + '.png';
 
     var diceDOM2 = document.querySelector('.dice2');
-    //diceDOM2.style.display = 'inline-block';
+    diceDOM2.style.display = 'inline-block';
     diceDOM2.src = 'dice-' + dice2 + '.png';
     
     //Update the round score IF the rolled number was NOT a 1
-    if (dice1 !== 1 || dice2 !== 1){
+    if (dice1 !== 1 && dice2 !== 1){
       //Add score
       var dice = dice1 + dice2;
       roundScore += dice;
