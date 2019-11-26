@@ -174,3 +174,8 @@ i {
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
+.popup__header{
+    font-size: 100px;
+    padding: 3px;
+    text-align: center;
+}
