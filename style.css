@@ -138,8 +138,8 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new { 
-    top: 45px;
+.btn-new { top: 45px; }
+.btn-new--js {
     display: none;
 }
 .btn-roll { top: 403px;}

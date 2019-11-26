@@ -38,7 +38,9 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 
 });
 document.querySelector('.btn-new').addEventListener('click', init);
-
+document.querySelector('.btn-start').addEventListener('click', function(){
+  document.querySelector('.btn-new').classList.remove('btn-new--js');
+})
 //Functions
 function btn(){
   if(gamePlaying){
