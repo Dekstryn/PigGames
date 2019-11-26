@@ -48,7 +48,7 @@ function btn(){
     //Random number
     var dice1 = Math.floor(Math.random() * 6) + 1;
     var dice2 = Math.floor(Math.random() * 6) + 1;
-
+    document.querySelector('.btn-player').classList.add('btn-player--js');
     //Display the result
     var diceDOM1 = document.querySelector('.dice1');
     diceDOM1.style.display = 'inline-block';
@@ -84,6 +84,7 @@ function nextplayer(){
   document.getElementById('current-1').textContent = '0';
   document.querySelector('.player-0-panel').classList.toggle('active');
   document.querySelector('.player-1-panel').classList.toggle('active');
+  document.querySelector('.btn-player').classList.remove('btn-player--js');
 }
 
 function init(){
@@ -104,5 +105,6 @@ function init(){
   document.querySelector('.player-0-panel').classList.remove('active');
   document.querySelector('.player-1-panel').classList.remove('active');
   document.querySelector('.player-0-panel').classList.add('active');
+  document.querySelector('.btn-player').classList.add('btn-player--js');
   gamePlaying = true;
 }
