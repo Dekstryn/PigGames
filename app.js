@@ -10,7 +10,7 @@ GAME RULES:
 */
 
 //Variable settings
-var scores, roundScore, activePlayer, gamePlaying;
+var scores, roundScore, activePlayer, gamePlaying, input;
 
 init();
 
@@ -22,10 +22,20 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     scores[activePlayer] += roundScore;
     //Update the UI
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+    //Defined winner score
+    input = document.querySelector('.final-score').value;
+
+    if(input){
+      winValue = input;
+    }
+    else {
+      winValue = 100;
+    }
     //Check if palyer win the game
-    if (scores[activePlayer] >= 100){
+    if (scores[activePlayer] >= winValue){
       document.querySelector('#name-' + activePlayer).textContent = 'Winner';
-      document.querySelector('.dice').style.display = 'none';
+      document.querySelector('.dice1').style.display = 'none';
+      document.querySelector('.dice2').style.display = 'none';
       document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
       document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
       gamePlaying = false;
@@ -37,23 +47,39 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 
 });
 document.querySelector('.btn-new').addEventListener('click', init);
-
+document.querySelector('.btn-start').addEventListener('click', function(){
+document.querySelector('.btn-new').classList.remove('btn-new--js');
+document.querySelector('.popup').style.display = 'none';
+})
 //Functions
 function btn(){
   if(gamePlaying){
     //Random number
-    var dice = Math.floor(Math.random() * 6) + 1;
-
+    var dice1 = Math.floor(Math.random() * 6) + 1;
+    var dice2 = Math.floor(Math.random() * 6) + 1;
+    document.querySelector('.btn-player').classList.add('btn-player--js');
     //Display the result
-    var diceDOM = document.querySelector('.dice');
-    diceDOM.style.display = 'block';
-    diceDOM.src = 'dice-' + dice + '.png';
+    var diceDOM1 = document.querySelector('.dice1');
+    diceDOM1.style.display = 'inline-block';
+    diceDOM1.src = 'dice-' + dice1 + '.png';
+
+    var diceDOM2 = document.querySelector('.dice2');
+    diceDOM2.style.display = 'inline-block';
+    diceDOM2.src = 'dice-' + dice2 + '.png';
     
     //Update the round score IF the rolled number was NOT a 1
-    if (dice !== 1){
+    if (dice1 !== 1 && dice2 !== 1){
       //Add score
+      var dice = dice1 + dice2;
       roundScore += dice;
       document.querySelector('#current-' + activePlayer).textContent = roundScore;
+    }
+    else if (dice1 == 1 && dice2 == 1){
+      //Reset current player storage
+      scores[activePlayer] = 0;
+      document.getElementById('score-' + activePlayer).textContent = '0';
+      //Next player
+      nextplayer();
     }
     else {
       //Next player
@@ -68,7 +94,7 @@ function nextplayer(){
   document.getElementById('current-1').textContent = '0';
   document.querySelector('.player-0-panel').classList.toggle('active');
   document.querySelector('.player-1-panel').classList.toggle('active');
-  document.querySelector('.dice').style.display = 'none';
+  document.querySelector('.btn-player').classList.remove('btn-player--js');
 }
 
 function init(){
@@ -76,7 +102,8 @@ function init(){
   activePlayer = 0;
   roundScore = 0;
   //DOM manipulating
-  document.querySelector('.dice').style.display = 'none';
+  document.querySelector('.dice1').style.display = 'none';
+  document.querySelector('.dice2').style.display = 'none';
   document.getElementById('score-0').textContent = '0';
   document.getElementById('score-1').textContent = '0';
   document.getElementById('current-0').textContent = '0';
@@ -88,5 +115,6 @@ function init(){
   document.querySelector('.player-0-panel').classList.remove('active');
   document.querySelector('.player-1-panel').classList.remove('active');
   document.querySelector('.player-0-panel').classList.add('active');
+  document.querySelector('.btn-player').classList.add('btn-player--js');
   gamePlaying = true;
 }

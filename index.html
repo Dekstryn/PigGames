@@ -29,13 +29,41 @@
                 </div>
             </div>
             
-            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-new btn-new--js"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-player btn-player--js">Zmiana gracza</button>
             <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
             <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
-            
-            <img src="dice-5.png" alt="Dice" class="dice">
+            <input type="text" placeholder="Do ilu gramy?" class="final-score">
+            <img src="dice-5.png" alt="Dice" class="dice1">
+            <img src="dice-2.png" alt="Dice" class="dice2">
         </div>
-        
+        <div class="popup">
+            <h2 class="popup__header">Zasady gry</h2>
+            <ul class="popup__list">
+                <li>
+                    W grze wygrywa gracz który zbierze jak najszybciej ustaloną ilość punktów (domyślnie 100);
+                </li>
+                <li>
+                    Punkty odpowiadają liczbie wyrzuconych oczek w danej rundzie;
+                </li>
+                <li>
+                    W danje rundzie możesz rzucać dowolną ilość razy. Punkt z każdego rzutu sumują się;
+                </li>
+                <li>
+                    W dowolnym momencie możesz zapisać ilość punktów z danej rundy na swoje konto;
+                </li>
+                <li>
+                    Zapisując punkty na konto przekazujesz kości drugiemu graczowi;
+                </li>
+                <li>
+                    Jeżeli wyrzucić jeden, to runda przechodzi na drugiego gracza;
+                </li>
+                <li>
+                    Jeżeli wyrzucisz dwie jedynki, runda przechodzi na drugiego gracza, a twoje konto zeruje się.
+                </li>
+            </ul>
+            <button class="btn-start btn-start--js">Zaczynamy</button>
+        </div>
         <script src="app.js"></script>
     </body>
 </html>
