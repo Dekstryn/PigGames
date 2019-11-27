@@ -80,6 +80,7 @@ function btn(){
     else if (dice1 == 1 && dice2 == 1){
       //Reset current player storage
       scores[activePlayer] = 0;
+      document.getElementById('score-' + activePlayer).textContent = '0';
       //Next player
       nextplayer();
     }
