@@ -10,7 +10,7 @@ GAME RULES:
 */
 
 //Variable settings
-var scores, roundScore, activePlayer, gamePlaying, winValue;
+var scores, roundScore, activePlayer, gamePlaying, input;
 
 init();
 
@@ -23,6 +23,8 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     //Update the UI
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
     //Defined winner score
+    input = document.querySelector('.final-score').value;
+
     if(input){
       winValue = input;
     }
@@ -46,8 +48,8 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 });
 document.querySelector('.btn-new').addEventListener('click', init);
 document.querySelector('.btn-start').addEventListener('click', function(){
-  document.querySelector('.btn-new').classList.remove('btn-new--js');
-  document.querySelector('.popup').style.display = 'none';
+document.querySelector('.btn-new').classList.remove('btn-new--js');
+document.querySelector('.popup').style.display = 'none';
 })
 //Functions
 function btn(){
