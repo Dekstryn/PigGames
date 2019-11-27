@@ -10,32 +10,27 @@ GAME RULES:
 */
 
 //Variable settings
-var scores, roundScore, activePlayer, gamePlaying, numberValue;
+var scores, roundScore, activePlayer, gamePlaying, winValue;
 
 init();
 
 //Event listener
 document.querySelector('.btn-roll').addEventListener('click', btn);
-numberValue = document.getElementById('number').value;
-
-//Normalize numberValue
-if (numberValue > 1000){
-  numberValue = 1000;
-}
-else if (numberValue < 10){
-  numberValue = 10;
-}
-document.querySelector('.btn-number').addEventListener('click', function(){
-  document.querySelector('.popup-counting').style.display = 'none';
-});
 document.querySelector('.btn-hold').addEventListener('click', function() {
   if(gamePlaying){
     //Add current score to global score
     scores[activePlayer] += roundScore;
     //Update the UI
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+    //Defined winner score
+    if(input){
+      winValue = input;
+    }
+    else {
+      winValue = 100;
+    }
     //Check if palyer win the game
-    if (scores[activePlayer] >= numberValue){
+    if (scores[activePlayer] >= winValue){
       document.querySelector('#name-' + activePlayer).textContent = 'Winner';
       document.querySelector('.dice1').style.display = 'none';
       document.querySelector('.dice2').style.display = 'none';

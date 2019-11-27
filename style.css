@@ -202,30 +202,17 @@ i {
     display: block;
     margin: 24px;
 }
-.popup-counting{
-    width: 500px;
-    height: 130px;
+.final-score {
     position: absolute;
-    z-index: 2;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
-}
-.popup-counting__label{
-    font-size: 24px;
-    padding: 3px;
-    margin:8px;
+    transform: translateX(-50%);
+    top: 520px;
+    color: #555;
+    font-size: 18px;
+    font-family: 'Lato';
     text-align: center;
-    display: list-item;
+    padding: 10px;
+    width: 160px;
+    text-transform: uppercase;
 }
-.number_form__input{
-    display: list-item;
-    margin: auto;
-    padding: 8px;
-    text-align: center;
-}
-.btn-number{
-    margin: 12px 0;
-}
+.final-score:focus {outline: none;}
