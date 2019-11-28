@@ -1,5 +1,5 @@
 # PigGames
-Pig Games created durring JS Course
+Pig Games created durring JS Course published on [My website] (http://krzysztofnyrek.pl/piggames/)
 
 ## technologies used
 * Java Script
