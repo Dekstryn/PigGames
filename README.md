@@ -1,4 +1,5 @@
 # PigGames
+![Two dice] (dice.png)
 Pig Games created durring JS Course published on [My website] (http://krzysztofnyrek.pl/piggames/)
 
 ## technologies used
