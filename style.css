@@ -242,3 +242,34 @@ Break point:
         line-height: 24px;
     }
 }
+@media(max-width: 850px){
+    .wrapper {
+        width: 600px;
+    }
+    .active .player-name::after {
+        right: -20px;        
+    }
+    .popup {
+        width: 600px;
+    }
+    .popup__list{
+        padding: 24px 0 12px 40px;
+        line-height: 18px;
+        font-size: 14px;
+    }
+    .dice1{
+        left: 50%;
+        top: 180px;
+    }
+    .dice2{
+        left:50%;
+        top: 290px;
+    }
+    .player-name{
+        right: 25px;
+        width: fit-content;
+    }
+    .player-current-box{
+        width: fit-content;
+    }
+}
