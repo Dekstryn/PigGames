@@ -216,3 +216,29 @@ i {
     text-transform: uppercase;
 }
 .final-score:focus {outline: none;}
+
+/**********************************************
+*** MEDIA QUERY
+**********************************************/
+
+/*
+Break point:
+1050 px;
+850 px;
+600 px;
+*/
+@media(max-width: 1050px){
+    .wrapper {
+        width: 800px;
+    }
+    .active .player-name::after {
+        right: -20px;        
+    }
+    .popup {
+        width: 800px;
+    }
+    .popup__list{
+        padding: 12px 0 12px 90px;
+        line-height: 24px;
+    }
+}
