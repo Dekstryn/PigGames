@@ -200,7 +200,7 @@ i {
 }
 .btn-start{
     display: block;
-    margin: 24px;
+    margin: 24px auto;
 }
 .final-score {
     position: absolute;
@@ -276,5 +276,17 @@ Break point:
 @media(max-width: 600px){
     .wrapper {
         width: 50vh;
+    }
+    .popup {
+        width: 45vh;
+        height: 90vh;
+    }
+    .popup__header{
+        font-size: 3em;
+    }
+    .popup__list{
+        padding: 0.5em 0.5em 0.5em 2em;
+        line-height: 1.3em;
+        font-size: 1em;
     }
 }
