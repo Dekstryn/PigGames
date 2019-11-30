@@ -9,6 +9,9 @@ Pig Games created durring JS Course published on [My website](http://krzysztofny
 * HTML 5
 * CSS
 
+### Version 1.2
+Set aplication responsible.
+
 ### Version 1.1
 Now you play two dice, and you can set winning score any time during the game.
 I also add game rules when the page appears.
