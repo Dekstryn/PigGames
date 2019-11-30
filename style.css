@@ -267,7 +267,7 @@ Break point:
     }
     .player-name{
         right: 25px;
-        width: fit-content;
+        width: max-content;
     }
     .player-current-box{
         width: fit-content;
@@ -289,4 +289,62 @@ Break point:
         line-height: 1.3em;
         font-size: 1em;
     }
+    .player-0-panel,
+    .player-1-panel {
+    width: max-content;
+    height: 45vh;
+    padding: 100px;
+    }
+    .active .player-name::after {
+        right: -30px;        
+    }
+    .player-name{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        position: relative;
+        top: -40px;
+    }
+    .player-score {
+        margin-bottom: 0px;
+        display: inline-block;
+        padding: 12px;
+        position: relative;
+        top: -50px;
+    }
+    .player-current-score {
+        display: inline-block;
+    }
+    .player-current-box{
+        display: inline-block;
+        margin: 0px 6px;
+        position: relative;
+        top: -50px;
+    }
+    .btn-new{
+        top: 20px;
+    } 
+    .btn-roll{ 
+        top: 320px;
+        left: 120px;
+        width: max-content;
+        font-size: 16px;
+    }
+    .btn-hold{
+        top: 320px;
+        left: 250px;
+        width: max-content;
+        font-size: 16px;
+    }
+    .dice1{
+        left: 35%;
+        top: 220px;
+        height: 10%;
+    }
+    .dice2{
+        left: 65%;
+        top: 220px;
+        height: 10%;
+    }
+    .btn-player{ display: none;}
+    .final-score {top: 540px;}
 }
