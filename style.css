@@ -346,5 +346,5 @@ Break point:
         height: 10%;
     }
     .btn-player{ display: none;}
-    .final-score {top: 540px;}
+    .final-score {top: 80vh;}
 }
