@@ -273,3 +273,8 @@ Break point:
         width: fit-content;
     }
 }
+@media(max-width: 600px){
+    .wrapper {
+        width: 50vh;
+    }
+}
